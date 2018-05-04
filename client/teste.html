@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <table id="teste">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>Salário</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        <tbody>
+    </table>
+
+    <script>
+        let teste = document.getElementById('teste');
+        let body = teste.querySelector('tbody');
+
+        let funcionarios = [
+            {
+                "nome": "Douglas",
+                "endereco" : "Rua da esquina, 123",
+                "salario" : "4500"
+            },
+            {
+                "nome": "Felipe",
+                "endereco" : "Rua da virada, 456",
+                "salario" : "5000"
+            },
+            {
+                "nome": "Silvio",
+                "endereco" : "Rua da aresta, 789",
+                "salario" : "6000"
+            }
+        ];
+
+        body.innerHTML = `
+            ${funcionarios.map(fun => `
+                <tr>
+                    <td>${fun.nome}</td>
+                    <td>${fun.endereco}</td>
+                    <td>${fun.salario}</td>
+                </tr>
+            `).join('')}`;
+        
+    </script>
+</body>
+</html>
