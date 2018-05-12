@@ -16,11 +16,9 @@ class NegociacaoService {
             let negociacoes = periodos
                 .reduce((dados, periodo) => dados.concat(periodo), []);
 
-            return periodos;
+            return negociacoes;
 
-        }).catch(erro => {
-            throw new Error(erro);
-        })
+        }).catch(erro => console.log(periodos))
     }
 
     _obterNegociacoesDaSemana() {
