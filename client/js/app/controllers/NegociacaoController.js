@@ -52,7 +52,7 @@ class NegociacaoController {
     }
 
     ordena(coluna) {
-        if(this._ordemAtual == coluna) {
+        if (this._ordemAtual == coluna) {
             this._listaNegociacoes.inverteOrdem();
         } else {
             this._listaNegociacoes.ordena((a, b) => a[coluna] - b[coluna]);
